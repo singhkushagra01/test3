@@ -51,5 +51,5 @@ jobs:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
         with:
           files: |
-            test.xml
+            *.xml
           
