@@ -1,1 +1,1 @@
-formatted_xml=$(xmllint --format text.xml)
+$(xmllint --format text.xml)
