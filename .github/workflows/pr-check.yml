@@ -2,7 +2,9 @@ name: Pull Request Size Check
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    branches:
+      - TEST
+      - TEST1
 
 jobs:
   check_pull_request_size:
