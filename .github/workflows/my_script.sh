@@ -1,1 +1,1 @@
-$(xmllint --format text.xml)
+format = $(xmllint --format text.xml)
