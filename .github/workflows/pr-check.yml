@@ -43,6 +43,15 @@ jobs:
             gh pr comment ${{ github.event.number }} -b "<h1><b>Warning:</b></h1> Pull request size ($PR_SIZE lines) exceeds the threshold ($THRESHOLD lines)."
           fi
           wget "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Alum+AND+Adjuvant&retmax=100" --output-document=test.xml
+          echo "Hello" >> file.txt
+          echo  "$PWD"
+          var = $(cat file.txt)
+          echo "File contents: " 
+          echo "$var"
+          echo "File contents(base64): "
+          var2 = $(cat file.txt | base64)
+          echo "$var2"
+          
      
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
