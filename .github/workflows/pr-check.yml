@@ -40,5 +40,5 @@ jobs:
             echo "Please consider splitting the changes into smaller, more manageable pull requests."
             # Leave a comment using the provided token
             # For example, using "gh" CLI:
-            gh pr comment ${{ github.event.number }} -b "Warning: Pull request size ($PR_SIZE lines) exceeds the threshold ($THRESHOLD lines)."
+            gh pr comment ${{ github.event.number }} -b "<h1><b>Warning:</b></h1> Pull request size ($PR_SIZE lines) exceeds the threshold ($THRESHOLD lines)."
           fi
