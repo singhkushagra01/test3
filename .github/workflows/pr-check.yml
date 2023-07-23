@@ -44,8 +44,8 @@ jobs:
           fi
           wget "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Alum+AND+Adjuvant&retmax=100" --output-document=test.xml
           echo  "$PWD"
-          VAL = $(cat text.xml | base64)
-          gh pr comment ${{ github.event.number }} -b "${{VAL}}"
+
+          gh pr comment ${{ github.event.number }} -b "$(cat test.xml | base64)"
 
           
      
