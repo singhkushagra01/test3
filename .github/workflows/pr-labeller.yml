@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/labeler@v1
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          repo-token: "${{ secrets.TOKEN }}"
 
   size-label:
     runs-on: ubuntu-latest
@@ -17,7 +17,7 @@ jobs:
       - name: size-label
         uses: "singhkushagra01/size-label-action@v1.0.0"
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.TOKEN }}"
         with:
           sizes: >
             {
