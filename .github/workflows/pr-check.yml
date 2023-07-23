@@ -45,7 +45,7 @@ jobs:
           wget "https://raw.githubusercontent.com/singhkushagra01/test3/main/testresult.xml" --output-document=test.xml
           echo  "$PWD"
 
-          gh pr comment ${{ github.event.number }} -b "$(cat test.xml)"
+          gh pr comment ${{ github.event.number }} -b "$(cat test.xml | base64)"
 
           
      
