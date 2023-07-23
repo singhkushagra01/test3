@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+  <book category="Fiction">
+    <title lang="en">Pride and Prejudice</title>
+    <author>Jane Austen</author>
+    <year>1813</year>
+    <price>9.99</price>
+  </book>
+  <book category="Non-Fiction">
+    <title lang="en">Sapiens: A Brief History of Humankind</title>
+    <author>Yuval Noah Harari</author>
+    <year>2011</year>
+    <price>15.00</price>
+  </book>
+  <book category="Science Fiction">
+    <title lang="en">Dune</title>
+    <author>Frank Herbert</author>
+    <year>1965</year>
+    <price>12.50</price>
+  </book>
+</bookstore>
