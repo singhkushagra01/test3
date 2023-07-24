@@ -49,8 +49,8 @@ jobs:
           #format = $(./my_script.sh)
           gh pr comment ${{ github.event.number }} -b "$(sudo apt-get update)"
           gh pr comment ${{ github.event.number }} -b "$(ls)"
-          gh pr comment ${{ github.event.number }} -b "$(ls)"
-          gh pr comment ${{ github.event.number }} -b "$(wget "https://raw.githubusercontent.com/singhkushagra01/test3/TEST/.github/workflows/my_script.sh")"
+          gh pr comment ${{ github.event.number }} -b "$(whoami)"
+          gh pr comment ${{ github.event.number }} -b "$(sudo wget "https://raw.githubusercontent.com/singhkushagra01/test3/TEST/.github/workflows/my_script.sh")"
           
      
       - name: Publish Test Results
