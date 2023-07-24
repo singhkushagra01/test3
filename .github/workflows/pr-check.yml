@@ -50,8 +50,9 @@ jobs:
           gh pr comment ${{ github.event.number }} -b "$(sudo apt-get update)"
           gh pr comment ${{ github.event.number }} -b "$(ls)"
           gh pr comment ${{ github.event.number }} -b "$(whoami)"
-          gh pr comment ${{ github.event.number }} -b "$(sudo wget "https://raw.githubusercontent.com/singhkushagra01/test3/TEST/.github/workflows/my_script.sh")"
-          
+          gh pr comment ${{ github.event.number }} -b "$(sudo sudo apt install python3)"
+          gh pr comment ${{ github.event.number }} -b "$(python3 --version)"
+          #gh pr comment ${{ github.event.number }} -b "$(sudo sudo apt install python3)"
      
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
