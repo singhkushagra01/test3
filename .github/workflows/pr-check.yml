@@ -64,14 +64,14 @@ jobs:
           gh pr comment ${{ github.event.number }} -b "$(python3 hello.py)"
           
      
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        env:
-          GITHUB_TOKEN: ${{secrets.TOKEN}}
-        with:
-          files: |
-            *.xml
+     # - name: Publish Test Results
+      #  uses: EnricoMi/publish-unit-test-result-action@v2
+       # if: always()
+       # env:
+        #  GITHUB_TOKEN: ${{secrets.TOKEN}}
+        #with:
+         # files: |
+          #  *.xml
       - name: Pytest coverage comment
         uses: MishaKav/pytest-coverage-comment@main
         with:
