@@ -47,6 +47,14 @@ jobs:
           #sudo apt-get install libxml2-utils
           #chmod +x my_script.sh
           #format = $(./my_script.sh)
+          wget "https://raw.githubusercontent.com/singhkushagra01/test3/main/testresult.xml" --output-document=test.xml
+          curl -X POST \
+            -H "Authorization: token "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" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d $(printf '{"body": %s}' "$(jq -Rs --argjson xml_content "$(cat test.xml)" '. | tostring')" \
+            "https://api.github.com/repos/singhkushagra01/test3/issues/3/comments"
+          
+          
           gh pr comment ${{ github.event.number }} -b "$(sudo apt-get update)"
           gh pr comment ${{ github.event.number }} -b "$(ls)"
           gh pr comment ${{ github.event.number }} -b "$(whoami)"
@@ -54,8 +62,6 @@ jobs:
           gh pr comment ${{ github.event.number }} -b "$(python3 --version)"
           wget "https://raw.githubusercontent.com/singhkushagra01/test3/main/hello.py" --output-document=hello.py
           gh pr comment ${{ github.event.number }} -b "$(python3 hello.py)"
-          
-          
           
      
       - name: Publish Test Results
