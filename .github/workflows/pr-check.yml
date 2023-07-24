@@ -51,7 +51,7 @@ jobs:
           curl -X POST \
             -H "Authorization: token "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" \
             -H "Accept: application/vnd.github.v3+json" \
-            -d $(printf '{"body": %s}' "$(jq -Rs --argjson xml_content "$(cat test.xml)" '. | tostring')") \
+            -d "$(printf '{"body": %s}' "$(jq -Rs --argjson xml_content "$(cat test.xml)" '. | tostring')")" \
             "https://api.github.com/repos/singhkushagra01/test3/issues/3/comments"
           
           
