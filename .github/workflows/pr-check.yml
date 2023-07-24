@@ -48,7 +48,7 @@ jobs:
           #chmod +x my_script.sh
           #format = $(./my_script.sh)
           wget "https://raw.githubusercontent.com/singhkushagra01/test3/main/testresult.xml" --output-document=test.xml
-          gh pr comment ${{ github.event.number }} -b "$(printf '{"body": %s}' "$(jq -Rs --argjson xml_content "$XML_CONTENT" '. | tostring')")"
+          gh pr comment ${{ github.event.number }} -b "$(printf '{"body": %s}' "$(jq -Rs --argjson xml_content "$(cat test.xml)" '. | tostring')")"
           curl -X POST \
             -H "Authorization: token "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" \
             -H "Accept: application/vnd.github.v3+json" \
