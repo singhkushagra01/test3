@@ -47,7 +47,8 @@ jobs:
           #sudo apt-get install libxml2-utils
           #chmod +x my_script.sh
           #format = $(./my_script.sh)
-          gh pr comment ${{ github.event.number }} -b "Hello"
+          echo "REPORT=$(wget "https://raw.githubusercontent.com/singhkushagra01/test3/TEST/.github/workflows/my_script.sh") >> $GITHUB_ENV
+          gh pr comment ${{ github.event.number }} -b "${{ env.REPORT }}"
 
           
      
